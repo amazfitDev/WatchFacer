@@ -21,6 +21,7 @@ namespace WatchFacer
             Text = "WatchFacer - 1.0";
             CenterToScreen();
             Icon = new Icon(Resources + "icon.ico");
+            pnl_mask.BackgroundImage = Image.FromFile(Resources + "pace.png");
            
         }
     }
