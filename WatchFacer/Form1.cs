@@ -15,6 +15,12 @@ namespace WatchFacer
         public Form1()
         {
             InitializeComponent();
+            InitUI();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
