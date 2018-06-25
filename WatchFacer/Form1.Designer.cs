@@ -62,7 +62,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(752, 529);
+            this.tabPage2.Size = new System.Drawing.Size(752, 517);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Preview";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -70,9 +70,9 @@
             // pnl_mask
             // 
             this.pnl_mask.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pnl_mask.Location = new System.Drawing.Point(152, 6);
+            this.pnl_mask.Location = new System.Drawing.Point(6, 5);
             this.pnl_mask.Name = "pnl_mask";
-            this.pnl_mask.Size = new System.Drawing.Size(502, 512);
+            this.pnl_mask.Size = new System.Drawing.Size(390, 512);
             this.pnl_mask.TabIndex = 1;
             // 
             // Form1
