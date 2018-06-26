@@ -14,6 +14,7 @@ namespace WatchFacer
     public partial class MainForm : Form
     {
         string Resources = Directory.GetCurrentDirectory() + "\\_Resources\\";
+		string ResourcesWidgets = Directory.GetCurrentDirectory() + "\\_Resources\\widgets\\";
         Color color;
         void InitUI()
         {
