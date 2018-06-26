@@ -191,6 +191,7 @@
             this.rb_analog.TabStop = true;
             this.rb_analog.Text = "Analog";
             this.rb_analog.UseVisualStyleBackColor = true;
+            this.rb_analog.CheckedChanged += new System.EventHandler(this.rb_analog_CheckedChanged);
             // 
             // pnl_mask
             // 
