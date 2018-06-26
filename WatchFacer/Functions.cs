@@ -11,9 +11,10 @@ using System.IO;
 
 namespace WatchFacer
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         string Resources = Directory.GetCurrentDirectory() + "\\_Resources\\";
+        Color color;
         void InitUI()
         {
             MaximizeBox = false;
@@ -22,7 +23,20 @@ namespace WatchFacer
             CenterToScreen();
             Icon = new Icon(Resources + "icon.ico");
             pnl_mask.BackgroundImage = Image.FromFile(Resources + "pace.png");
-           
+            btn_color.BackColor = Color.Black;
+
+            rb_analog.Checked = true;
+            //Remove all tabs and rearrange them
+            tab_type.TabPages.Remove(tab_analog);
+            tab_type.TabPages.Remove(tab_digital);
+            tab_type.TabPages.Add(tab_analog);
+
+            cb_reduction.Text = "- Color reduction mode -";
+            cb_reduction.Items.Add("RGB Channels + 50% threshold");
+            cb_reduction.Items.Add("Dithering + RGB space quantization");
+            cb_reduction.Items.Add("Dithering + sRGB space quantization");
+            cb_reduction.Items.Add("Dithering + LAB space quantization");
+
         }
     }
    
