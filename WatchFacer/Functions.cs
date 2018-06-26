@@ -15,6 +15,11 @@ namespace WatchFacer
     {
         string Resources = Directory.GetCurrentDirectory() + "\\_Resources\\";
 		string ResourcesWidgets = Directory.GetCurrentDirectory() + "\\_Resources\\widgets\\";
+        string ResourcesAnalog_Hours = Directory.GetCurrentDirectory() + "\\_Resources\\analog\\hours\\";
+        string ResourcesAnalog_Minutes = Directory.GetCurrentDirectory() + "\\_Resources\\analog\\minutes\\";
+        string ResourcesAnalog_Seconds = Directory.GetCurrentDirectory() + "\\_Resources\\analog\\seconds\\";
+        string ResourcesAnalog_Markers = Directory.GetCurrentDirectory() + "\\_Resources\\analog\\markers\\";
+
         Color color;
         void InitUI()
         {
