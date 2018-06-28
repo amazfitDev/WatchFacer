@@ -43,14 +43,26 @@ namespace WatchFacer
             cb_reduction.Items.Add("Dithering + sRGB space quantization");
             cb_reduction.Items.Add("Dithering + LAB space quantization");
 
-            AddToCB(ResourcesAnalog_Hours, cb_hours);
-            AddToCB(ResourcesAnalog_Markers, cb_markers);
-            AddToCB(ResourcesAnalog_Minutes, cb_minutes);
-            AddToCB(ResourcesAnalog_Seconds, cb_seconds);
+            pb_markers.SizeMode =
+            pb_hours.SizeMode =
+            pb_minutes.SizeMode =
+            pb_seconds.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            AddToCB(ResourcesAnalog_Markers, cb_markers, pb_markers);
+            AddToCB(ResourcesAnalog_Hours, cb_hours, pb_hours);
+            AddToCB(ResourcesAnalog_Minutes, cb_minutes, pb_minutes);
+            AddToCB(ResourcesAnalog_Seconds, cb_seconds, pb_seconds);
+
+            pb_markers.Image.RotateFlip(RotateFlipType.Rotate90FlipY);
+            pb_hours.Image.RotateFlip(RotateFlipType.Rotate90FlipY);
+            pb_minutes.Image.RotateFlip(RotateFlipType.Rotate90FlipY);
+            pb_seconds.Image.RotateFlip(RotateFlipType.Rotate90FlipY);
+
 
         }
+        
 
-        void AddToCB(string file,ComboBox cb)
+        void AddToCB(string file,ComboBox cb, PictureBox pb)
         {
             string[] dirs = Directory.GetFiles(file);
             int i = 0;
@@ -61,7 +73,8 @@ namespace WatchFacer
                 cb.Items.Add(dirs[i]);
                 i++;
             }
-
+            cb.Text = cb.Items[0].ToString();
+            pb.Image = Image.FromFile( file + dirs[0]);
         }
     }
    

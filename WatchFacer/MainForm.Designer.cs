@@ -36,10 +36,10 @@
             this.gb_watchStats = new System.Windows.Forms.GroupBox();
             this.tab_type = new System.Windows.Forms.TabControl();
             this.tab_analog = new System.Windows.Forms.TabPage();
-            this.pnl_markers = new System.Windows.Forms.Panel();
-            this.pnl_seconds = new System.Windows.Forms.Panel();
-            this.pnl_minutes = new System.Windows.Forms.Panel();
-            this.pnl_hours = new System.Windows.Forms.Panel();
+            this.pb_markers = new System.Windows.Forms.PictureBox();
+            this.pb_seconds = new System.Windows.Forms.PictureBox();
+            this.pb_minutes = new System.Windows.Forms.PictureBox();
+            this.pb_hours = new System.Windows.Forms.PictureBox();
             this.cb_markers = new System.Windows.Forms.ComboBox();
             this.lb_markers = new System.Windows.Forms.Label();
             this.cb_seconds = new System.Windows.Forms.ComboBox();
@@ -121,6 +121,10 @@
             this.gb_watchStats.SuspendLayout();
             this.tab_type.SuspendLayout();
             this.tab_analog.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_markers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_seconds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_minutes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_hours)).BeginInit();
             this.tab_digital.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -225,10 +229,10 @@
             // 
             // tab_analog
             // 
-            this.tab_analog.Controls.Add(this.pnl_markers);
-            this.tab_analog.Controls.Add(this.pnl_seconds);
-            this.tab_analog.Controls.Add(this.pnl_minutes);
-            this.tab_analog.Controls.Add(this.pnl_hours);
+            this.tab_analog.Controls.Add(this.pb_markers);
+            this.tab_analog.Controls.Add(this.pb_seconds);
+            this.tab_analog.Controls.Add(this.pb_minutes);
+            this.tab_analog.Controls.Add(this.pb_hours);
             this.tab_analog.Controls.Add(this.cb_markers);
             this.tab_analog.Controls.Add(this.lb_markers);
             this.tab_analog.Controls.Add(this.cb_seconds);
@@ -245,42 +249,46 @@
             this.tab_analog.Text = "Analog";
             this.tab_analog.UseVisualStyleBackColor = true;
             // 
-            // pnl_markers
+            // pb_markers
             // 
-            this.pnl_markers.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnl_markers.Location = new System.Drawing.Point(114, 145);
-            this.pnl_markers.Name = "pnl_markers";
-            this.pnl_markers.Size = new System.Drawing.Size(95, 90);
-            this.pnl_markers.TabIndex = 9;
+            this.pb_markers.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pb_markers.Location = new System.Drawing.Point(89, 211);
+            this.pb_markers.Name = "pb_markers";
+            this.pb_markers.Size = new System.Drawing.Size(143, 131);
+            this.pb_markers.TabIndex = 9;
+            this.pb_markers.TabStop = false;
             // 
-            // pnl_seconds
+            // pb_seconds
             // 
-            this.pnl_seconds.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnl_seconds.Location = new System.Drawing.Point(211, 66);
-            this.pnl_seconds.Name = "pnl_seconds";
-            this.pnl_seconds.Size = new System.Drawing.Size(95, 22);
-            this.pnl_seconds.TabIndex = 8;
+            this.pb_seconds.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pb_seconds.Location = new System.Drawing.Point(220, 46);
+            this.pb_seconds.Name = "pb_seconds";
+            this.pb_seconds.Size = new System.Drawing.Size(100, 100);
+            this.pb_seconds.TabIndex = 8;
+            this.pb_seconds.TabStop = false;
             // 
-            // pnl_minutes
+            // pb_minutes
             // 
-            this.pnl_minutes.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnl_minutes.Location = new System.Drawing.Point(110, 66);
-            this.pnl_minutes.Name = "pnl_minutes";
-            this.pnl_minutes.Size = new System.Drawing.Size(95, 22);
-            this.pnl_minutes.TabIndex = 8;
+            this.pb_minutes.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pb_minutes.Location = new System.Drawing.Point(115, 46);
+            this.pb_minutes.Name = "pb_minutes";
+            this.pb_minutes.Size = new System.Drawing.Size(100, 100);
+            this.pb_minutes.TabIndex = 8;
+            this.pb_minutes.TabStop = false;
             // 
-            // pnl_hours
+            // pb_hours
             // 
-            this.pnl_hours.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pnl_hours.Location = new System.Drawing.Point(9, 66);
-            this.pnl_hours.Name = "pnl_hours";
-            this.pnl_hours.Size = new System.Drawing.Size(95, 22);
-            this.pnl_hours.TabIndex = 8;
+            this.pb_hours.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pb_hours.Location = new System.Drawing.Point(9, 46);
+            this.pb_hours.Name = "pb_hours";
+            this.pb_hours.Size = new System.Drawing.Size(100, 100);
+            this.pb_hours.TabIndex = 8;
+            this.pb_hours.TabStop = false;
             // 
             // cb_markers
             // 
             this.cb_markers.FormattingEnabled = true;
-            this.cb_markers.Location = new System.Drawing.Point(114, 118);
+            this.cb_markers.Location = new System.Drawing.Point(110, 184);
             this.cb_markers.Name = "cb_markers";
             this.cb_markers.Size = new System.Drawing.Size(95, 21);
             this.cb_markers.TabIndex = 7;
@@ -288,7 +296,7 @@
             // lb_markers
             // 
             this.lb_markers.AutoSize = true;
-            this.lb_markers.Location = new System.Drawing.Point(111, 102);
+            this.lb_markers.Location = new System.Drawing.Point(107, 168);
             this.lb_markers.Name = "lb_markers";
             this.lb_markers.Size = new System.Drawing.Size(45, 13);
             this.lb_markers.TabIndex = 6;
@@ -297,7 +305,7 @@
             // cb_seconds
             // 
             this.cb_seconds.FormattingEnabled = true;
-            this.cb_seconds.Location = new System.Drawing.Point(211, 39);
+            this.cb_seconds.Location = new System.Drawing.Point(220, 19);
             this.cb_seconds.Name = "cb_seconds";
             this.cb_seconds.Size = new System.Drawing.Size(95, 21);
             this.cb_seconds.TabIndex = 5;
@@ -305,7 +313,7 @@
             // lb_seconds
             // 
             this.lb_seconds.AutoSize = true;
-            this.lb_seconds.Location = new System.Drawing.Point(208, 23);
+            this.lb_seconds.Location = new System.Drawing.Point(217, 3);
             this.lb_seconds.Name = "lb_seconds";
             this.lb_seconds.Size = new System.Drawing.Size(49, 13);
             this.lb_seconds.TabIndex = 4;
@@ -314,7 +322,7 @@
             // cb_minutes
             // 
             this.cb_minutes.FormattingEnabled = true;
-            this.cb_minutes.Location = new System.Drawing.Point(110, 39);
+            this.cb_minutes.Location = new System.Drawing.Point(115, 19);
             this.cb_minutes.Name = "cb_minutes";
             this.cb_minutes.Size = new System.Drawing.Size(95, 21);
             this.cb_minutes.TabIndex = 3;
@@ -322,7 +330,7 @@
             // lb_minutes
             // 
             this.lb_minutes.AutoSize = true;
-            this.lb_minutes.Location = new System.Drawing.Point(107, 23);
+            this.lb_minutes.Location = new System.Drawing.Point(112, 3);
             this.lb_minutes.Name = "lb_minutes";
             this.lb_minutes.Size = new System.Drawing.Size(44, 13);
             this.lb_minutes.TabIndex = 2;
@@ -331,7 +339,7 @@
             // cb_hours
             // 
             this.cb_hours.FormattingEnabled = true;
-            this.cb_hours.Location = new System.Drawing.Point(9, 39);
+            this.cb_hours.Location = new System.Drawing.Point(9, 19);
             this.cb_hours.Name = "cb_hours";
             this.cb_hours.Size = new System.Drawing.Size(95, 21);
             this.cb_hours.TabIndex = 1;
@@ -339,7 +347,7 @@
             // lb_hours
             // 
             this.lb_hours.AutoSize = true;
-            this.lb_hours.Location = new System.Drawing.Point(6, 23);
+            this.lb_hours.Location = new System.Drawing.Point(6, 3);
             this.lb_hours.Name = "lb_hours";
             this.lb_hours.Size = new System.Drawing.Size(35, 13);
             this.lb_hours.TabIndex = 0;
@@ -1000,13 +1008,16 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "MainForm";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.gb_selectedType.ResumeLayout(false);
             this.gb_selectedType.PerformLayout();
             this.gb_watchStats.ResumeLayout(false);
             this.tab_type.ResumeLayout(false);
             this.tab_analog.ResumeLayout(false);
             this.tab_analog.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_markers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_seconds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_minutes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_hours)).EndInit();
             this.tab_digital.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -1060,10 +1071,10 @@
         private System.Windows.Forms.GroupBox gb_watchStats;
         private System.Windows.Forms.TabControl tab_type;
         private System.Windows.Forms.TabPage tab_analog;
-        private System.Windows.Forms.Panel pnl_markers;
-        private System.Windows.Forms.Panel pnl_seconds;
-        private System.Windows.Forms.Panel pnl_minutes;
-        private System.Windows.Forms.Panel pnl_hours;
+        private System.Windows.Forms.PictureBox pb_markers;
+        private System.Windows.Forms.PictureBox pb_seconds;
+        private System.Windows.Forms.PictureBox pb_minutes;
+        private System.Windows.Forms.PictureBox pb_hours;
         private System.Windows.Forms.ComboBox cb_markers;
         private System.Windows.Forms.Label lb_markers;
         private System.Windows.Forms.ComboBox cb_seconds;
