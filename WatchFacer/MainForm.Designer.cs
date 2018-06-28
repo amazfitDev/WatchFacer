@@ -1000,6 +1000,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "MainForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.gb_selectedType.ResumeLayout(false);
             this.gb_selectedType.PerformLayout();
             this.gb_watchStats.ResumeLayout(false);

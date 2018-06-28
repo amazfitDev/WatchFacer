@@ -43,6 +43,25 @@ namespace WatchFacer
             cb_reduction.Items.Add("Dithering + sRGB space quantization");
             cb_reduction.Items.Add("Dithering + LAB space quantization");
 
+            AddToCB(ResourcesAnalog_Hours, cb_hours);
+            AddToCB(ResourcesAnalog_Markers, cb_markers);
+            AddToCB(ResourcesAnalog_Minutes, cb_minutes);
+            AddToCB(ResourcesAnalog_Seconds, cb_seconds);
+
+        }
+
+        void AddToCB(string file,ComboBox cb)
+        {
+            string[] dirs = Directory.GetFiles(file);
+            int i = 0;
+            foreach (string dir in dirs)
+            {
+                int idx = dir.LastIndexOf('\\');
+                dirs[i] = dir.Substring(idx + 1);
+                cb.Items.Add(dirs[i]);
+                i++;
+            }
+
         }
     }
    
