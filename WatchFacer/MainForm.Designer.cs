@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cd_color = new System.Windows.Forms.ColorDialog();
             this.gb_selectedType = new System.Windows.Forms.GroupBox();
             this.rb_digital = new System.Windows.Forms.RadioButton();
             this.rb_analog = new System.Windows.Forms.RadioButton();
@@ -112,9 +111,7 @@
             this.cb_reduction = new System.Windows.Forms.ComboBox();
             this.lb_description = new System.Windows.Forms.Label();
             this.lb_reduction = new System.Windows.Forms.Label();
-            this.btn_color = new System.Windows.Forms.Button();
             this.tb_description = new System.Windows.Forms.TextBox();
-            this.lb_color = new System.Windows.Forms.Label();
             this.lb_watchName = new System.Windows.Forms.Label();
             this.tb_watchName = new System.Windows.Forms.TextBox();
             this.gb_selectedType.SuspendLayout();
@@ -892,9 +889,7 @@
             this.gp_info.Controls.Add(this.cb_reduction);
             this.gp_info.Controls.Add(this.lb_description);
             this.gp_info.Controls.Add(this.lb_reduction);
-            this.gp_info.Controls.Add(this.btn_color);
             this.gp_info.Controls.Add(this.tb_description);
-            this.gp_info.Controls.Add(this.lb_color);
             this.gp_info.Controls.Add(this.lb_watchName);
             this.gp_info.Controls.Add(this.tb_watchName);
             this.gp_info.Location = new System.Drawing.Point(12, 12);
@@ -956,15 +951,6 @@
             this.lb_reduction.TabIndex = 0;
             this.lb_reduction.Text = "Background Type";
             // 
-            // btn_color
-            // 
-            this.btn_color.Location = new System.Drawing.Point(101, 77);
-            this.btn_color.Name = "btn_color";
-            this.btn_color.Size = new System.Drawing.Size(78, 23);
-            this.btn_color.TabIndex = 1;
-            this.btn_color.UseVisualStyleBackColor = true;
-            this.btn_color.Click += new System.EventHandler(this.btn_color_Click);
-            // 
             // tb_description
             // 
             this.tb_description.Location = new System.Drawing.Point(194, 24);
@@ -972,15 +958,6 @@
             this.tb_description.Name = "tb_description";
             this.tb_description.Size = new System.Drawing.Size(147, 76);
             this.tb_description.TabIndex = 4;
-            // 
-            // lb_color
-            // 
-            this.lb_color.AutoSize = true;
-            this.lb_color.Location = new System.Drawing.Point(3, 82);
-            this.lb_color.Name = "lb_color";
-            this.lb_color.Size = new System.Drawing.Size(92, 13);
-            this.lb_color.TabIndex = 0;
-            this.lb_color.Text = "Background Color";
             // 
             // lb_watchName
             // 
@@ -1063,8 +1040,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ColorDialog cd_color;
         private System.Windows.Forms.GroupBox gb_selectedType;
         private System.Windows.Forms.RadioButton rb_digital;
         private System.Windows.Forms.RadioButton rb_analog;
@@ -1148,9 +1123,7 @@
         private System.Windows.Forms.ComboBox cb_reduction;
         private System.Windows.Forms.Label lb_description;
         private System.Windows.Forms.Label lb_reduction;
-        private System.Windows.Forms.Button btn_color;
         private System.Windows.Forms.TextBox tb_description;
-        private System.Windows.Forms.Label lb_color;
         private System.Windows.Forms.Label lb_watchName;
         private System.Windows.Forms.TextBox tb_watchName;
     }

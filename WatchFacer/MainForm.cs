@@ -44,17 +44,6 @@ namespace WatchFacer
             MessageBox.Show(helpText, "Explanation", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
-        private void btn_color_Click(object sender, EventArgs e)
-        {
-            if (cd_color.ShowDialog() == DialogResult.OK)
-            {
-                color = cd_color.Color;
-                btn_color.BackColor = color;
-            }
-        }
-
-   
-
         private void rb_analog_CheckedChanged(object sender, EventArgs e)
         {
             if (rb_analog.Checked)
