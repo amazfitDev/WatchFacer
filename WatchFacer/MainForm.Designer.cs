@@ -928,6 +928,7 @@
             this.btn_help.TabIndex = 6;
             this.btn_help.Text = "?";
             this.btn_help.UseVisualStyleBackColor = true;
+            this.btn_help.Click += new System.EventHandler(this.btn_help_Click);
             // 
             // cb_reduction
             // 
