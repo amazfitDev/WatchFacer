@@ -29,7 +29,6 @@ namespace WatchFacer
             CenterToScreen();
             Icon = new Icon(Resources + "icon.ico");
             pnl_mask.BackgroundImage = Image.FromFile(Resources + "pace.png");
-            btn_color.BackColor = Color.Black;
 
             rb_analog.Checked = true;
             //Remove all tabs and rearrange them
