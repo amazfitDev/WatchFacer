@@ -82,5 +82,10 @@ namespace WatchFacer
                     break;
             }
         }
+
+        private void tb_transparency_Scroll(object sender, EventArgs e)
+        {
+            pb_markers.BackColor = Color.FromArgb(tbr_transparency.Value * 10, Color.Gray);
+        }
     }
 }

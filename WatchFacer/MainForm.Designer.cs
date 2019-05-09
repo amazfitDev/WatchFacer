@@ -114,6 +114,8 @@
             this.tb_description = new System.Windows.Forms.TextBox();
             this.lb_watchName = new System.Windows.Forms.Label();
             this.tb_watchName = new System.Windows.Forms.TextBox();
+            this.tbr_transparency = new System.Windows.Forms.TrackBar();
+            this.lb_transparency = new System.Windows.Forms.Label();
             this.gb_selectedType.SuspendLayout();
             this.gb_watchStats.SuspendLayout();
             this.tab_type.SuspendLayout();
@@ -158,6 +160,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nud_dateX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_dayofweekX)).BeginInit();
             this.gp_info.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbr_transparency)).BeginInit();
             this.SuspendLayout();
             // 
             // gb_selectedType
@@ -226,6 +229,8 @@
             // 
             // tab_analog
             // 
+            this.tab_analog.Controls.Add(this.lb_transparency);
+            this.tab_analog.Controls.Add(this.tbr_transparency);
             this.tab_analog.Controls.Add(this.pb_markers);
             this.tab_analog.Controls.Add(this.pb_seconds);
             this.tab_analog.Controls.Add(this.pb_minutes);
@@ -249,7 +254,7 @@
             // pb_markers
             // 
             this.pb_markers.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pb_markers.Location = new System.Drawing.Point(89, 211);
+            this.pb_markers.Location = new System.Drawing.Point(133, 211);
             this.pb_markers.Name = "pb_markers";
             this.pb_markers.Size = new System.Drawing.Size(143, 131);
             this.pb_markers.TabIndex = 9;
@@ -285,7 +290,7 @@
             // cb_markers
             // 
             this.cb_markers.FormattingEnabled = true;
-            this.cb_markers.Location = new System.Drawing.Point(110, 184);
+            this.cb_markers.Location = new System.Drawing.Point(134, 184);
             this.cb_markers.Name = "cb_markers";
             this.cb_markers.Size = new System.Drawing.Size(95, 21);
             this.cb_markers.TabIndex = 7;
@@ -294,7 +299,7 @@
             // lb_markers
             // 
             this.lb_markers.AutoSize = true;
-            this.lb_markers.Location = new System.Drawing.Point(107, 168);
+            this.lb_markers.Location = new System.Drawing.Point(131, 168);
             this.lb_markers.Name = "lb_markers";
             this.lb_markers.Size = new System.Drawing.Size(45, 13);
             this.lb_markers.TabIndex = 6;
@@ -979,6 +984,24 @@
             this.tb_watchName.Size = new System.Drawing.Size(100, 20);
             this.tb_watchName.TabIndex = 0;
             // 
+            // tbr_transparency
+            // 
+            this.tbr_transparency.Location = new System.Drawing.Point(15, 297);
+            this.tbr_transparency.Name = "tbr_transparency";
+            this.tbr_transparency.Size = new System.Drawing.Size(112, 45);
+            this.tbr_transparency.TabIndex = 10;
+            this.tbr_transparency.Value = 5;
+            this.tbr_transparency.Scroll += new System.EventHandler(this.tb_transparency_Scroll);
+            // 
+            // lb_transparency
+            // 
+            this.lb_transparency.AutoSize = true;
+            this.lb_transparency.Location = new System.Drawing.Point(15, 278);
+            this.lb_transparency.Name = "lb_transparency";
+            this.lb_transparency.Size = new System.Drawing.Size(113, 13);
+            this.lb_transparency.TabIndex = 11;
+            this.lb_transparency.Text = "Preview Transparency";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1039,6 +1062,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nud_dayofweekX)).EndInit();
             this.gp_info.ResumeLayout(false);
             this.gp_info.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbr_transparency)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1130,6 +1154,8 @@
         private System.Windows.Forms.TextBox tb_description;
         private System.Windows.Forms.Label lb_watchName;
         private System.Windows.Forms.TextBox tb_watchName;
+        private System.Windows.Forms.Label lb_transparency;
+        private System.Windows.Forms.TrackBar tbr_transparency;
     }
 }
 
