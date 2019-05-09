@@ -289,6 +289,7 @@
             this.cb_markers.Name = "cb_markers";
             this.cb_markers.Size = new System.Drawing.Size(95, 21);
             this.cb_markers.TabIndex = 7;
+            this.cb_markers.SelectedIndexChanged += new System.EventHandler(this.cb_SelectedIndexChanged);
             // 
             // lb_markers
             // 
@@ -306,6 +307,7 @@
             this.cb_seconds.Name = "cb_seconds";
             this.cb_seconds.Size = new System.Drawing.Size(95, 21);
             this.cb_seconds.TabIndex = 5;
+            this.cb_seconds.SelectedIndexChanged += new System.EventHandler(this.cb_SelectedIndexChanged);
             // 
             // lb_seconds
             // 
@@ -323,6 +325,7 @@
             this.cb_minutes.Name = "cb_minutes";
             this.cb_minutes.Size = new System.Drawing.Size(95, 21);
             this.cb_minutes.TabIndex = 3;
+            this.cb_minutes.SelectedIndexChanged += new System.EventHandler(this.cb_SelectedIndexChanged);
             // 
             // lb_minutes
             // 
@@ -340,6 +343,7 @@
             this.cb_hours.Name = "cb_hours";
             this.cb_hours.Size = new System.Drawing.Size(95, 21);
             this.cb_hours.TabIndex = 1;
+            this.cb_hours.SelectedIndexChanged += new System.EventHandler(this.cb_SelectedIndexChanged);
             // 
             // lb_hours
             // 

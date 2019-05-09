@@ -62,5 +62,25 @@ namespace WatchFacer
         {
 
         }
+
+        private void cb_SelectedIndexChanged(object sender, EventArgs e) {
+            switch (((ComboBox)sender).Name.ToString()) {
+                case "cb_hours":
+                    pb_hours.Image = Image.FromFile(ResourcesAnalog_Hours + ((ComboBox)sender).Items[((ComboBox)sender).SelectedIndex]);
+                    pb_hours.Image.RotateFlip(RotateFlipType.Rotate90FlipY);
+                    break;
+                case "cb_minutes":
+                    pb_minutes.Image = Image.FromFile(ResourcesAnalog_Minutes + ((ComboBox)sender).Items[((ComboBox)sender).SelectedIndex]);
+                    pb_minutes.Image.RotateFlip(RotateFlipType.Rotate90FlipY);
+                    break;
+                case "cb_seconds":
+                    pb_seconds.Image = Image.FromFile(ResourcesAnalog_Seconds + ((ComboBox)sender).Items[((ComboBox)sender).SelectedIndex]);
+                    pb_seconds.Image.RotateFlip(RotateFlipType.Rotate90FlipY);
+                    break;
+                case "cb_markers":
+                    pb_markers.Image = Image.FromFile(ResourcesAnalog_Markers + ((ComboBox)sender).Items[((ComboBox)sender).SelectedIndex]);
+                    break;
+            }
+        }
     }
 }
