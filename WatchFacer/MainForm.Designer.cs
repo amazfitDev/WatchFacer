@@ -286,6 +286,7 @@
             this.pb_markers.Size = new System.Drawing.Size(143, 131);
             this.pb_markers.TabIndex = 9;
             this.pb_markers.TabStop = false;
+            this.pb_markers.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pb_markers_MouseDown);
             // 
             // pb_seconds
             // 
@@ -1058,6 +1059,8 @@
             this.pnl_editor.Name = "pnl_editor";
             this.pnl_editor.Size = new System.Drawing.Size(322, 322);
             this.pnl_editor.TabIndex = 0;
+            this.pnl_editor.DragDrop += new System.Windows.Forms.DragEventHandler(this.pnl_editor_DragDrop);
+            this.pnl_editor.DragEnter += new System.Windows.Forms.DragEventHandler(this.pnl_editor_DragEnter);
             // 
             // tabPage1
             // 

@@ -16,6 +16,7 @@ namespace WatchFacer
         {
             InitializeComponent();
             InitUI();
+            pnl_editor.AllowDrop = true;
         }
 
         private void btn_help_Click(object sender, EventArgs e)
@@ -102,5 +103,26 @@ namespace WatchFacer
 
         }
 
+        private void pb_markers_MouseDown(object sender, MouseEventArgs e)
+        {
+            Image tmp = pb_markers.Image;
+            if (tmp == null) return;
+            if (DoDragDrop(tmp, DragDropEffects.Move) == DragDropEffects.Move)
+            {
+               // needed in order to register to img to our stacks
+            }
+        }
+
+        private void pnl_editor_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.Bitmap))
+                e.Effect = DragDropEffects.Move;
+        }
+
+        private void pnl_editor_DragDrop(object sender, DragEventArgs e)
+        {
+            var bmp = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            pnl_editor.BackgroundImage = bmp;
+        }
     }
 }
