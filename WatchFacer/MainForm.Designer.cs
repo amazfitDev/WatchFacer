@@ -1052,21 +1052,21 @@
             // pnl_editor
             // 
             this.pnl_editor.BackColor = System.Drawing.Color.Silver;
-            this.pnl_editor.Location = new System.Drawing.Point(37, 92);
+            this.pnl_editor.Location = new System.Drawing.Point(47, 92);
             this.pnl_editor.Name = "pnl_editor";
             this.pnl_editor.Size = new System.Drawing.Size(322, 322);
             this.pnl_editor.TabIndex = 0;
             // 
             // pnl_y
             // 
-            this.pnl_y.Location = new System.Drawing.Point(8, 92);
+            this.pnl_y.Location = new System.Drawing.Point(6, 89);
             this.pnl_y.Name = "pnl_y";
-            this.pnl_y.Size = new System.Drawing.Size(23, 322);
+            this.pnl_y.Size = new System.Drawing.Size(41, 347);
             this.pnl_y.TabIndex = 2;
             // 
             // pnl_x
             // 
-            this.pnl_x.Location = new System.Drawing.Point(25, 63);
+            this.pnl_x.Location = new System.Drawing.Point(35, 63);
             this.pnl_x.Name = "pnl_x";
             this.pnl_x.Size = new System.Drawing.Size(347, 23);
             this.pnl_x.TabIndex = 1;

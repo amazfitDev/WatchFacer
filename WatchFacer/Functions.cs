@@ -74,9 +74,10 @@ namespace WatchFacer
             {
                 DashStyle = System.Drawing.Drawing2D.DashStyle.Dash
             };
+            Graphics gp;
 
             // Axes X
-            Graphics gp = pnl_x.CreateGraphics();
+            gp = pnl_x.CreateGraphics();
             gp.DrawLine(p, new Point(10, 13), new Point(340, 13));
             for (var i = 0; i <= 320; i += 40)
             {
@@ -88,8 +89,19 @@ namespace WatchFacer
                 gp.DrawString("|", drawFont, b, 12+i- (drawFont.SizeInPoints / 2), 12);
             }
 
+            // Axes Y
             gp = pnl_y.CreateGraphics();
-            gp.DrawLine(p, new Point(12,0), new Point(12, 322));
+            gp.DrawLine(p, new Point(35,4), new Point(35, 325));
+
+            for (var i = 0; i <= 320; i += 40)
+            {
+                if (i == 0) gp.DrawString(i + "", drawFont, b,  14,  i  );// 14=10+fontsize/2. 10 is an abstract offset
+                else if (i<99) // 2 digits
+                    gp.DrawString(i + "", drawFont, b, 12, i - 4); // 12 means 10+fontsize/2/2
+                else //3 digits
+                    gp.DrawString(i + "", drawFont, b,  10, i -4 );
+                gp.DrawString("-", drawFont, b,  35,  i -4 );
+            }
         }
 
         void AddToCB(string file,ComboBox cb, PictureBox pb)
