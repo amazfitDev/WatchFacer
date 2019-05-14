@@ -1047,7 +1047,7 @@
             this.pnl_editor.BackColor = System.Drawing.Color.Silver;
             this.pnl_editor.Location = new System.Drawing.Point(32, 92);
             this.pnl_editor.Name = "pnl_editor";
-            this.pnl_editor.Size = new System.Drawing.Size(321, 321);
+            this.pnl_editor.Size = new System.Drawing.Size(322, 322);
             this.pnl_editor.TabIndex = 0;
             // 
             // MainForm
