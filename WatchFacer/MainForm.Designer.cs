@@ -35,6 +35,8 @@
             this.gb_watchStats = new System.Windows.Forms.GroupBox();
             this.tab_type = new System.Windows.Forms.TabControl();
             this.tab_analog = new System.Windows.Forms.TabPage();
+            this.lb_transparency = new System.Windows.Forms.Label();
+            this.tbr_transparency = new System.Windows.Forms.TrackBar();
             this.pb_markers = new System.Windows.Forms.PictureBox();
             this.pb_seconds = new System.Windows.Forms.PictureBox();
             this.pb_minutes = new System.Windows.Forms.PictureBox();
@@ -114,12 +116,14 @@
             this.tb_description = new System.Windows.Forms.TextBox();
             this.lb_watchName = new System.Windows.Forms.Label();
             this.tb_watchName = new System.Windows.Forms.TextBox();
-            this.tbr_transparency = new System.Windows.Forms.TrackBar();
-            this.lb_transparency = new System.Windows.Forms.Label();
+            this.tab_view = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.gb_selectedType.SuspendLayout();
             this.gb_watchStats.SuspendLayout();
             this.tab_type.SuspendLayout();
             this.tab_analog.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbr_transparency)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_markers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_seconds)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_minutes)).BeginInit();
@@ -160,7 +164,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nud_dateX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_dayofweekX)).BeginInit();
             this.gp_info.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbr_transparency)).BeginInit();
+            this.tab_view.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_selectedType
@@ -200,9 +205,9 @@
             // pnl_mask
             // 
             this.pnl_mask.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pnl_mask.Location = new System.Drawing.Point(368, 41);
+            this.pnl_mask.Location = new System.Drawing.Point(8, 3);
             this.pnl_mask.Name = "pnl_mask";
-            this.pnl_mask.Size = new System.Drawing.Size(390, 512);
+            this.pnl_mask.Size = new System.Drawing.Size(378, 498);
             this.pnl_mask.TabIndex = 7;
             // 
             // gb_watchStats
@@ -250,6 +255,24 @@
             this.tab_analog.TabIndex = 0;
             this.tab_analog.Text = "Analog";
             this.tab_analog.UseVisualStyleBackColor = true;
+            // 
+            // lb_transparency
+            // 
+            this.lb_transparency.AutoSize = true;
+            this.lb_transparency.Location = new System.Drawing.Point(15, 278);
+            this.lb_transparency.Name = "lb_transparency";
+            this.lb_transparency.Size = new System.Drawing.Size(113, 13);
+            this.lb_transparency.TabIndex = 11;
+            this.lb_transparency.Text = "Preview Transparency";
+            // 
+            // tbr_transparency
+            // 
+            this.tbr_transparency.Location = new System.Drawing.Point(15, 297);
+            this.tbr_transparency.Name = "tbr_transparency";
+            this.tbr_transparency.Size = new System.Drawing.Size(112, 45);
+            this.tbr_transparency.TabIndex = 10;
+            this.tbr_transparency.Value = 5;
+            this.tbr_transparency.Scroll += new System.EventHandler(this.tb_transparency_Scroll);
             // 
             // pb_markers
             // 
@@ -984,30 +1007,43 @@
             this.tb_watchName.Size = new System.Drawing.Size(100, 20);
             this.tb_watchName.TabIndex = 0;
             // 
-            // tbr_transparency
+            // tab_view
             // 
-            this.tbr_transparency.Location = new System.Drawing.Point(15, 297);
-            this.tbr_transparency.Name = "tbr_transparency";
-            this.tbr_transparency.Size = new System.Drawing.Size(112, 45);
-            this.tbr_transparency.TabIndex = 10;
-            this.tbr_transparency.Value = 5;
-            this.tbr_transparency.Scroll += new System.EventHandler(this.tb_transparency_Scroll);
+            this.tab_view.Controls.Add(this.tabPage1);
+            this.tab_view.Controls.Add(this.tabPage2);
+            this.tab_view.Location = new System.Drawing.Point(368, 20);
+            this.tab_view.Name = "tab_view";
+            this.tab_view.SelectedIndex = 0;
+            this.tab_view.Size = new System.Drawing.Size(400, 533);
+            this.tab_view.TabIndex = 8;
             // 
-            // lb_transparency
+            // tabPage1
             // 
-            this.lb_transparency.AutoSize = true;
-            this.lb_transparency.Location = new System.Drawing.Point(15, 278);
-            this.lb_transparency.Name = "lb_transparency";
-            this.lb_transparency.Size = new System.Drawing.Size(113, 13);
-            this.lb_transparency.TabIndex = 11;
-            this.lb_transparency.Text = "Preview Transparency";
+            this.tabPage1.Controls.Add(this.pnl_mask);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(392, 507);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Preview";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(392, 507);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Editor";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 557);
-            this.Controls.Add(this.pnl_mask);
+            this.Controls.Add(this.tab_view);
             this.Controls.Add(this.gb_watchStats);
             this.Controls.Add(this.gp_info);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -1019,6 +1055,7 @@
             this.tab_type.ResumeLayout(false);
             this.tab_analog.ResumeLayout(false);
             this.tab_analog.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbr_transparency)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_markers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_seconds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_minutes)).EndInit();
@@ -1062,7 +1099,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nud_dayofweekX)).EndInit();
             this.gp_info.ResumeLayout(false);
             this.gp_info.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbr_transparency)).EndInit();
+            this.tab_view.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1156,6 +1194,9 @@
         private System.Windows.Forms.TextBox tb_watchName;
         private System.Windows.Forms.Label lb_transparency;
         private System.Windows.Forms.TrackBar tbr_transparency;
+        private System.Windows.Forms.TabControl tab_view;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 
