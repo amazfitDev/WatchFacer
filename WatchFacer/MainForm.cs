@@ -92,8 +92,10 @@ namespace WatchFacer
         {
             if (tab_view.SelectedTab == tab_view.TabPages["tabPage2"])
             {
-                Pen p = new Pen(Color.Gray,2);
-                p.DashStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+                Pen p = new Pen(Color.Gray, 2)
+                {
+                    DashStyle = System.Drawing.Drawing2D.DashStyle.Dot
+                };
                 Graphics gp = pnl_editor.CreateGraphics();
                 gp.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
                 gp.DrawEllipse(p, new Rectangle(new Point(0, 0), new Size(320, 320)));

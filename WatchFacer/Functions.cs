@@ -62,7 +62,10 @@ namespace WatchFacer
             pb_wDay.Size = new Size(32, 21);
             pb_wDay.Image = Image.FromFile(ResourcesWidgets + "day.png");
             pb_wDay.Visible = false;
-            
+
+            pnl_x.BackgroundImage = Image.FromFile(Resources + "\\axesx.png");
+            pnl_y.BackgroundImage = Image.FromFile(Resources + "\\axesy.png");
+
         }
        
         void AddToCB(string file,ComboBox cb, PictureBox pb)

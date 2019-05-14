@@ -1061,16 +1061,16 @@
             // 
             // pnl_y
             // 
-            this.pnl_y.Location = new System.Drawing.Point(6, 89);
+            this.pnl_y.Location = new System.Drawing.Point(11, 89);
             this.pnl_y.Name = "pnl_y";
-            this.pnl_y.Size = new System.Drawing.Size(41, 347);
+            this.pnl_y.Size = new System.Drawing.Size(32, 332);
             this.pnl_y.TabIndex = 2;
             // 
             // pnl_x
             // 
-            this.pnl_x.Location = new System.Drawing.Point(35, 63);
+            this.pnl_x.Location = new System.Drawing.Point(37, 54);
             this.pnl_x.Name = "pnl_x";
-            this.pnl_x.Size = new System.Drawing.Size(347, 23);
+            this.pnl_x.Size = new System.Drawing.Size(345, 35);
             this.pnl_x.TabIndex = 1;
             // 
             // button1
