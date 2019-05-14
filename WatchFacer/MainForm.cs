@@ -87,5 +87,18 @@ namespace WatchFacer
         {
             pb_markers.BackColor = Color.FromArgb(tbr_transparency.Value * 10, Color.Gray);
         }
+
+        private void tab_view_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tab_view.SelectedTab == tab_view.TabPages["tabPage2"])
+            {
+                Pen p = new Pen(Color.Gray);
+                p.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+                Graphics gp = pnl_editor.CreateGraphics();
+                gp.DrawEllipse(p, new Rectangle(new Point(0, 0), new Size(320, 320)));
+                gp.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear;
+                
+            }
+        }
     }
 }

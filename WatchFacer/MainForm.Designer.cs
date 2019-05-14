@@ -119,6 +119,7 @@
             this.tab_view = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pnl_editor = new System.Windows.Forms.Panel();
             this.gb_selectedType.SuspendLayout();
             this.gb_watchStats.SuspendLayout();
             this.tab_type.SuspendLayout();
@@ -166,6 +167,7 @@
             this.gp_info.SuspendLayout();
             this.tab_view.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_selectedType
@@ -1016,6 +1018,7 @@
             this.tab_view.SelectedIndex = 0;
             this.tab_view.Size = new System.Drawing.Size(400, 533);
             this.tab_view.TabIndex = 8;
+            this.tab_view.SelectedIndexChanged += new System.EventHandler(this.tab_view_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -1030,6 +1033,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.pnl_editor);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -1037,6 +1041,14 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Editor";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // pnl_editor
+            // 
+            this.pnl_editor.BackColor = System.Drawing.Color.Silver;
+            this.pnl_editor.Location = new System.Drawing.Point(32, 92);
+            this.pnl_editor.Name = "pnl_editor";
+            this.pnl_editor.Size = new System.Drawing.Size(321, 321);
+            this.pnl_editor.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -1049,6 +1061,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "MainForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.gb_selectedType.ResumeLayout(false);
             this.gb_selectedType.PerformLayout();
             this.gb_watchStats.ResumeLayout(false);
@@ -1101,6 +1114,7 @@
             this.gp_info.PerformLayout();
             this.tab_view.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1197,6 +1211,7 @@
         private System.Windows.Forms.TabControl tab_view;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Panel pnl_editor;
     }
 }
 
