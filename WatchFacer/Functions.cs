@@ -20,6 +20,7 @@ namespace WatchFacer
         string ResourcesAnalog_Seconds = Directory.GetCurrentDirectory() + "\\_Resources\\analog\\seconds\\";
         string ResourcesAnalog_Markers = Directory.GetCurrentDirectory() + "\\_Resources\\analog\\markers\\";
 
+        PictureBox pb_wDay = new PictureBox();
         void InitUI()
         {
             MaximizeBox = false;
@@ -56,7 +57,11 @@ namespace WatchFacer
             pb_minutes.Image.RotateFlip(RotateFlipType.Rotate90FlipY);
             pb_seconds.Image.RotateFlip(RotateFlipType.Rotate90FlipY);
 
-
+            pb_wDay.Location = new Point(0, 0);
+            pnl_editor.Controls.Add(pb_wDay);
+            pb_wDay.Size = new Size(32, 21);
+            pb_wDay.Image = Image.FromFile(ResourcesWidgets + "day.png");
+            pb_wDay.Visible = false;
         }
         
 

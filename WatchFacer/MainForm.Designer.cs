@@ -812,6 +812,7 @@
             this.nud_dayofweekY.Name = "nud_dayofweekY";
             this.nud_dayofweekY.Size = new System.Drawing.Size(55, 20);
             this.nud_dayofweekY.TabIndex = 1;
+            this.nud_dayofweekY.ValueChanged += new System.EventHandler(this.nud_dayofweekX_ValueChanged);
             // 
             // nud_totaldistX
             // 
@@ -864,6 +865,7 @@
             this.nud_dayofweekX.Name = "nud_dayofweekX";
             this.nud_dayofweekX.Size = new System.Drawing.Size(55, 20);
             this.nud_dayofweekX.TabIndex = 1;
+            this.nud_dayofweekX.ValueChanged += new System.EventHandler(this.nud_dayofweekX_ValueChanged);
             // 
             // cb_battery
             // 
@@ -914,6 +916,7 @@
             this.cb_dayofweek.TabIndex = 0;
             this.cb_dayofweek.Text = "Day of week";
             this.cb_dayofweek.UseVisualStyleBackColor = true;
+            this.cb_dayofweek.CheckedChanged += new System.EventHandler(this.cb_dayofweek_CheckedChanged);
             // 
             // gp_info
             // 
