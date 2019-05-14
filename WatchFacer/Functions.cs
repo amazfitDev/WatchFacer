@@ -19,7 +19,7 @@ namespace WatchFacer
         string ResourcesAnalog_Minutes = Directory.GetCurrentDirectory() + "\\_Resources\\analog\\minutes\\";
         string ResourcesAnalog_Seconds = Directory.GetCurrentDirectory() + "\\_Resources\\analog\\seconds\\";
         string ResourcesAnalog_Markers = Directory.GetCurrentDirectory() + "\\_Resources\\analog\\markers\\";
-
+        string ResourcesEditor = Directory.GetCurrentDirectory() + "\\_Resources\\editor\\";
         PictureBox pb_wDay = new PictureBox();
         void InitUI()
         {
@@ -63,9 +63,9 @@ namespace WatchFacer
             pb_wDay.Image = Image.FromFile(ResourcesWidgets + "day.png");
             pb_wDay.Visible = false;
 
-            pnl_x.BackgroundImage = Image.FromFile(Resources + "\\axesx.png");
-            pnl_y.BackgroundImage = Image.FromFile(Resources + "\\axesy.png");
-            pnl_editor.BackgroundImage = Image.FromFile(Resources + "\\mask.png");
+            pnl_x.BackgroundImage = Image.FromFile(ResourcesEditor + "axesx.png");
+            pnl_y.BackgroundImage = Image.FromFile(ResourcesEditor + "axesy.png");
+            pnl_editor.BackgroundImage = Image.FromFile(ResourcesEditor + "mask.png");
 
         }
        
