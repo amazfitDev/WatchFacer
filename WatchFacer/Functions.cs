@@ -20,7 +20,6 @@ namespace WatchFacer
         string ResourcesAnalog_Seconds = Directory.GetCurrentDirectory() + "\\_Resources\\analog\\seconds\\";
         string ResourcesAnalog_Markers = Directory.GetCurrentDirectory() + "\\_Resources\\analog\\markers\\";
 
-        Color color;
         void InitUI()
         {
             MaximizeBox = false;
