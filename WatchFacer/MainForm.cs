@@ -97,8 +97,6 @@ namespace WatchFacer
                 Graphics gp = pnl_editor.CreateGraphics();
                 gp.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
                 gp.DrawEllipse(p, new Rectangle(new Point(0, 0), new Size(320, 320)));
-
-                DrawAxes();
             }
         }
         
@@ -114,6 +112,11 @@ namespace WatchFacer
         {
             pb_wDay.Visible = cb_dayofweek.Checked;
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -62,48 +62,9 @@ namespace WatchFacer
             pb_wDay.Size = new Size(32, 21);
             pb_wDay.Image = Image.FromFile(ResourcesWidgets + "day.png");
             pb_wDay.Visible = false;
-
             
         }
-        
-        void DrawAxes()
-        {
-            Font drawFont = new Font("Arial", 8);
-            Brush b = new SolidBrush(Color.Black);
-            Pen p = new Pen(Color.Black, 2)
-            {
-                DashStyle = System.Drawing.Drawing2D.DashStyle.Dash
-            };
-            Graphics gp;
-
-            // Axes X
-            gp = pnl_x.CreateGraphics();
-            gp.DrawLine(p, new Point(10, 13), new Point(340, 13));
-            for (var i = 0; i <= 320; i += 40)
-            {
-                if (i==0) gp.DrawString(i + "", drawFont, b, 12 + i - (drawFont.SizeInPoints / 2) -2, 0);// 4 means fontsize/2
-                else if (i<=99) //affects, 40 80 (2 digit)
-                    gp.DrawString(i + "", drawFont, b,12 +  i - (drawFont.SizeInPoints / 2)-4, 0); // 4 means fontsize/2
-                else /* 3 digit */ gp.DrawString(i + "", drawFont, b, 12 + i - (drawFont.SizeInPoints / 2) - 8, 0); // 8 means 2*fontsize/2=fontsize because we want to move 2 digits.
-
-                gp.DrawString("|", drawFont, b, 12+i- (drawFont.SizeInPoints / 2), 12);
-            }
-
-            // Axes Y
-            gp = pnl_y.CreateGraphics();
-            gp.DrawLine(p, new Point(35,4), new Point(35, 325));
-
-            for (var i = 0; i <= 320; i += 40)
-            {
-                if (i == 0) gp.DrawString(i + "", drawFont, b,  14,  i  );// 14=10+fontsize/2. 10 is an abstract offset
-                else if (i<99) // 2 digits
-                    gp.DrawString(i + "", drawFont, b, 12, i - 4); // 12 means 10+fontsize/2/2
-                else //3 digits
-                    gp.DrawString(i + "", drawFont, b,  10, i -4 );
-                gp.DrawString("-", drawFont, b,  35,  i -4 );
-            }
-        }
-
+       
         void AddToCB(string file,ComboBox cb, PictureBox pb)
         {
             string[] dirs = Directory.GetFiles(file);

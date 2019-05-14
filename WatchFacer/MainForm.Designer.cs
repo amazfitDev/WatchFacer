@@ -122,6 +122,7 @@
             this.pnl_editor = new System.Windows.Forms.Panel();
             this.pnl_y = new System.Windows.Forms.Panel();
             this.pnl_x = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.gb_selectedType.SuspendLayout();
             this.gb_watchStats.SuspendLayout();
             this.tab_type.SuspendLayout();
@@ -922,6 +923,7 @@
             // 
             // gp_info
             // 
+            this.gp_info.Controls.Add(this.button1);
             this.gp_info.Controls.Add(this.tb_author);
             this.gp_info.Controls.Add(this.lb_author);
             this.gp_info.Controls.Add(this.btn_help);
@@ -1016,8 +1018,8 @@
             // 
             // tab_view
             // 
-            this.tab_view.Controls.Add(this.tabPage1);
             this.tab_view.Controls.Add(this.tabPage2);
+            this.tab_view.Controls.Add(this.tabPage1);
             this.tab_view.Location = new System.Drawing.Point(368, 20);
             this.tab_view.Name = "tab_view";
             this.tab_view.SelectedIndex = 0;
@@ -1070,6 +1072,16 @@
             this.pnl_x.Name = "pnl_x";
             this.pnl_x.Size = new System.Drawing.Size(347, 23);
             this.pnl_x.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(22, 66);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainForm
             // 
@@ -1235,6 +1247,7 @@
         private System.Windows.Forms.Panel pnl_editor;
         private System.Windows.Forms.Panel pnl_y;
         private System.Windows.Forms.Panel pnl_x;
+        private System.Windows.Forms.Button button1;
     }
 }
 
