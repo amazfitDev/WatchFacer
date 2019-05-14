@@ -109,7 +109,7 @@ namespace WatchFacer
             if (tmp == null) return;
             if (DoDragDrop(tmp, DragDropEffects.Move) == DragDropEffects.Move)
             {
-               // needed in order to register to img to our stacks
+               // Success. needed in order to register to img to our stacks
             }
         }
 
@@ -118,11 +118,22 @@ namespace WatchFacer
             if (e.Data.GetDataPresent(DataFormats.Bitmap))
                 e.Effect = DragDropEffects.Move;
         }
-
+        
         private void pnl_editor_DragDrop(object sender, DragEventArgs e)
         {
+            if (pnl_editor.Controls.Contains(p_marker))
+            { 
+                pnl_editor.Controls.Remove(p_marker);
+                p_marker = new PictureBox(); // reinit avoiding memory leak
+            }
+            
             var bmp = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
-            pnl_editor.BackgroundImage = bmp;
+
+            p_marker.Size = new Size(320, 320);
+            pnl_editor.Controls.Add(p_marker);
+            p_marker.Location = new Point(0, 0);
+            p_marker.BackColor = Color.Transparent;
+            p_marker.Image = bmp;
         }
     }
 }

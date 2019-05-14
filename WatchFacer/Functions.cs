@@ -21,6 +21,7 @@ namespace WatchFacer
         string ResourcesAnalog_Markers = Directory.GetCurrentDirectory() + "\\_Resources\\analog\\markers\\";
         string ResourcesEditor = Directory.GetCurrentDirectory() + "\\_Resources\\editor\\";
         PictureBox pb_wDay = new PictureBox();
+        PictureBox p_marker = new PictureBox();
         void InitUI()
         {
             MaximizeBox = false;
