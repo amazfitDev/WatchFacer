@@ -65,6 +65,7 @@ namespace WatchFacer
 
             pnl_x.BackgroundImage = Image.FromFile(Resources + "\\axesx.png");
             pnl_y.BackgroundImage = Image.FromFile(Resources + "\\axesy.png");
+            pnl_editor.BackgroundImage = Image.FromFile(Resources + "\\mask.png");
 
         }
        

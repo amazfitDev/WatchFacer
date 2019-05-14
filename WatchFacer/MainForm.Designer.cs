@@ -117,12 +117,11 @@
             this.lb_watchName = new System.Windows.Forms.Label();
             this.tb_watchName = new System.Windows.Forms.TextBox();
             this.tab_view = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pnl_editor = new System.Windows.Forms.Panel();
             this.pnl_y = new System.Windows.Forms.Panel();
             this.pnl_x = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pnl_editor = new System.Windows.Forms.Panel();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.gb_selectedType.SuspendLayout();
             this.gb_watchStats.SuspendLayout();
             this.tab_type.SuspendLayout();
@@ -169,8 +168,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nud_dayofweekX)).BeginInit();
             this.gp_info.SuspendLayout();
             this.tab_view.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_selectedType
@@ -923,7 +922,6 @@
             // 
             // gp_info
             // 
-            this.gp_info.Controls.Add(this.button1);
             this.gp_info.Controls.Add(this.tb_author);
             this.gp_info.Controls.Add(this.lb_author);
             this.gp_info.Controls.Add(this.btn_help);
@@ -1025,18 +1023,6 @@
             this.tab_view.SelectedIndex = 0;
             this.tab_view.Size = new System.Drawing.Size(400, 533);
             this.tab_view.TabIndex = 8;
-            this.tab_view.SelectedIndexChanged += new System.EventHandler(this.tab_view_SelectedIndexChanged);
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.pnl_mask);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(392, 507);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Preview";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
@@ -1050,14 +1036,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Editor";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // pnl_editor
-            // 
-            this.pnl_editor.BackColor = System.Drawing.Color.Silver;
-            this.pnl_editor.Location = new System.Drawing.Point(47, 92);
-            this.pnl_editor.Name = "pnl_editor";
-            this.pnl_editor.Size = new System.Drawing.Size(322, 322);
-            this.pnl_editor.TabIndex = 0;
             // 
             // pnl_y
             // 
@@ -1073,15 +1051,24 @@
             this.pnl_x.Size = new System.Drawing.Size(345, 35);
             this.pnl_x.TabIndex = 1;
             // 
-            // button1
+            // pnl_editor
             // 
-            this.button1.Location = new System.Drawing.Point(22, 66);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.pnl_editor.BackColor = System.Drawing.Color.Silver;
+            this.pnl_editor.Location = new System.Drawing.Point(47, 92);
+            this.pnl_editor.Name = "pnl_editor";
+            this.pnl_editor.Size = new System.Drawing.Size(322, 322);
+            this.pnl_editor.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.pnl_mask);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(392, 507);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Preview";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -1146,8 +1133,8 @@
             this.gp_info.ResumeLayout(false);
             this.gp_info.PerformLayout();
             this.tab_view.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1247,7 +1234,6 @@
         private System.Windows.Forms.Panel pnl_editor;
         private System.Windows.Forms.Panel pnl_y;
         private System.Windows.Forms.Panel pnl_x;
-        private System.Windows.Forms.Button button1;
     }
 }
 
