@@ -97,6 +97,8 @@ namespace WatchFacer
                 Graphics gp = pnl_editor.CreateGraphics();
                 gp.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
                 gp.DrawEllipse(p, new Rectangle(new Point(0, 0), new Size(320, 320)));
+
+                DrawAxes();
             }
         }
         

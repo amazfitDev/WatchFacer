@@ -120,6 +120,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pnl_editor = new System.Windows.Forms.Panel();
+            this.pnl_y = new System.Windows.Forms.Panel();
+            this.pnl_x = new System.Windows.Forms.Panel();
             this.gb_selectedType.SuspendLayout();
             this.gb_watchStats.SuspendLayout();
             this.tab_type.SuspendLayout();
@@ -1036,6 +1038,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.pnl_y);
+            this.tabPage2.Controls.Add(this.pnl_x);
             this.tabPage2.Controls.Add(this.pnl_editor);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -1048,10 +1052,24 @@
             // pnl_editor
             // 
             this.pnl_editor.BackColor = System.Drawing.Color.Silver;
-            this.pnl_editor.Location = new System.Drawing.Point(32, 92);
+            this.pnl_editor.Location = new System.Drawing.Point(37, 92);
             this.pnl_editor.Name = "pnl_editor";
             this.pnl_editor.Size = new System.Drawing.Size(322, 322);
             this.pnl_editor.TabIndex = 0;
+            // 
+            // pnl_y
+            // 
+            this.pnl_y.Location = new System.Drawing.Point(8, 92);
+            this.pnl_y.Name = "pnl_y";
+            this.pnl_y.Size = new System.Drawing.Size(23, 322);
+            this.pnl_y.TabIndex = 2;
+            // 
+            // pnl_x
+            // 
+            this.pnl_x.Location = new System.Drawing.Point(25, 63);
+            this.pnl_x.Name = "pnl_x";
+            this.pnl_x.Size = new System.Drawing.Size(347, 23);
+            this.pnl_x.TabIndex = 1;
             // 
             // MainForm
             // 
@@ -1215,6 +1233,8 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Panel pnl_editor;
+        private System.Windows.Forms.Panel pnl_y;
+        private System.Windows.Forms.Panel pnl_x;
     }
 }
 

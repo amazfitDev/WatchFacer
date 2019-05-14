@@ -62,8 +62,35 @@ namespace WatchFacer
             pb_wDay.Size = new Size(32, 21);
             pb_wDay.Image = Image.FromFile(ResourcesWidgets + "day.png");
             pb_wDay.Visible = false;
+
+            
         }
         
+        void DrawAxes()
+        {
+            Font drawFont = new Font("Arial", 8);
+            Brush b = new SolidBrush(Color.Black);
+            Pen p = new Pen(Color.Black, 2)
+            {
+                DashStyle = System.Drawing.Drawing2D.DashStyle.Dash
+            };
+
+            // Axes X
+            Graphics gp = pnl_x.CreateGraphics();
+            gp.DrawLine(p, new Point(10, 13), new Point(340, 13));
+            for (var i = 0; i <= 320; i += 40)
+            {
+                if (i==0) gp.DrawString(i + "", drawFont, b, 12 + i - (drawFont.SizeInPoints / 2) -2, 0);// 4 means fontsize/2
+                else if (i<=99) //affects, 40 80 (2 digit)
+                    gp.DrawString(i + "", drawFont, b,12 +  i - (drawFont.SizeInPoints / 2)-4, 0); // 4 means fontsize/2
+                else /* 3 digit */ gp.DrawString(i + "", drawFont, b, 12 + i - (drawFont.SizeInPoints / 2) - 8, 0); // 8 means 2*fontsize/2=fontsize because we want to move 2 digits.
+
+                gp.DrawString("|", drawFont, b, 12+i- (drawFont.SizeInPoints / 2), 12);
+            }
+
+            gp = pnl_y.CreateGraphics();
+            gp.DrawLine(p, new Point(12,0), new Point(12, 322));
+        }
 
         void AddToCB(string file,ComboBox cb, PictureBox pb)
         {
